@@ -281,6 +281,7 @@ body {
     align-items: flex-start;
     justify-content: flex-start;
     padding: 1.6rem;
+    margin-bottom: 4rem;
 }
 
 .card__title {
