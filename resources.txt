@@ -1,0 +1,25 @@
+Resources:
+
+Colors:
+ 
+#333333
+#35B3A9
+#16C8BB
+#C1C5CD
+#2963A3
+#494949
+#868686
+#DEDEDE
+#EFF5FB
+#9D9D9D
+#E3F5F5
+#F9FDFD
+
+Fonts:
+Montserrat Bold
+Montserrat Regular
+Montserrat Medium
+Montserrat SemiBold
+Montserrat Italic
+Open Sans Regular
+
