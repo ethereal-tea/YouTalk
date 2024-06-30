@@ -21,6 +21,7 @@ a {
 
 body {
     position: relative;
+    overflow-x: hidden;
     z-index: 2;
     font-family: "MontserratRegular", sans-serif;
     font-size: 1.4rem;
@@ -84,6 +85,8 @@ body {
 
 .header__menu-btn {
     display: none;
+    background: transparent;
+    border: none;
 }
 
 .header__nav-item:hover {
@@ -113,7 +116,7 @@ body {
 /* Breadcrumb */
 
 .breadcrumb {
-    margin: 1.6rem auto 3rem auto;
+    margin: 1.6rem auto 4rem auto;
 }
 
 .breadcrumb__list {
@@ -210,6 +213,7 @@ body {
 .articles {
     margin-bottom: 5.6rem;
 }
+
 
 .articles__list {
     display: grid;
@@ -359,7 +363,8 @@ body {
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
-    min-width: 310px;
+    min-width: 247px;
+    /* min-width: 310px; */
     max-height: 178px;
     gap: 1.6rem;
 }
@@ -628,6 +633,10 @@ body {
     max-width: 282px;
 }
 
+.article__image-block > .article__image {
+    margin-bottom: 0;
+}
+
 
 .article__image-block .article__paragraph {
     margin: 0;
@@ -642,6 +651,7 @@ body {
 .article__image-block-vertical {
     display: flex;
     flex-direction: column;
+    gap: 2.4rem;
 }
 
 .article__image-block-vertical > .article__image {
@@ -734,7 +744,6 @@ body {
 .card-qlick {
     display: flex;
     flex-direction: column;
-    margin-left: auto;
     margin-bottom: 2.4rem;
     padding: 2.4rem;
     text-align: center;
@@ -825,9 +834,21 @@ body {
 }
 
 .card-psycho__about-item {
+    display: flex;
+    align-items: center;
     margin-bottom: 1.6rem;
     font-family: "MontserratMedium", sans-serif;
     color: #A2A7B1;
+}
+
+.card-psycho__about-item:first-child::after {
+    display: block;
+    margin-left: .8rem;
+    content: "";
+    width: .4rem;
+    height: .4rem;
+    border-radius: 100%;
+    background-color: #A2A7B1;
 }
 
 .card-psycho__image, .card-psycho__name, .card-psycho__role {
@@ -845,6 +866,25 @@ body {
     margin: .8rem 0 2rem;
 }
 
+.card-psycho__tasks-item {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: .4rem;
+}
+.card-psycho__tasks-item + .card-psycho__tasks-item {
+    margin-top: .8rem;
+}
+
+.card-psycho__tasks-item::before {
+    display: block;
+    padding: .4rem;
+    content: "";
+    width: .4rem;
+    height: .4rem;
+    background: #03B2A5;
+    border-radius: 100%;
+}
 
 .card-gift {
     display: flex;
@@ -940,4 +980,130 @@ body {
 
 .cta-section__image-container {
     position: relative;
+}
+
+.orange-blob {
+    position: absolute;
+    top: 50%;
+    right: 0;
+}
+
+
+/* Media Queries */
+
+/* 1024px >= screen <= 1439 */
+@media screen and (min-width: 1024px) and (max-width: 1439px) {
+    .header__container, main, .footer__top, .footer__bottom {
+        width: 91%;
+        max-width: 934px;
+        margin: 0 auto;
+    }  
+    .header__nav-list {
+        gap: 1.6rem;
+    }
+    .header__nav-link-dropdown {
+        gap: .4rem;
+    }
+    .articles {
+        margin-bottom: 3.5rem;
+    }
+    .footer {
+        margin-top: 6rem;
+    }
+    .article-container {
+        gap: 2.4rem;
+    }
+    .aside {
+        width: 100%;
+    }
+    .article__tags-list, .cta-section {
+        display: none;
+    }
+    .orange-blob {
+        display: none;
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+
+    .header__container, main, .footer__top, .footer__bottom {
+        width: 94%;
+        max-width: 728px;
+        margin: 0 auto;
+    } 
+
+    .header__nav {
+        display: none;
+    }
+
+    .header__btn {
+        display: none;
+    }
+
+    .header__menu-btn {
+        display: flex;
+    }
+
+    .articles__list-item {
+        grid-column-start: span 6;
+    }
+    
+    .articles__list-item-large {
+        grid-column-start: span 12;
+    }
+
+    .articles {
+        margin-bottom: 3.3rem;
+    }
+
+    .footer {
+        margin-top: 5.5rem;
+    }
+
+    .footer__top {
+        flex-wrap: wrap;
+    }
+
+    .footer__subscribe {
+        min-width: 450px;
+    }
+
+    .article > * {
+        max-width: none;
+        width: 100%;
+    }
+
+    .article-container {
+        display: flex;
+        flex-direction: column;
+        gap: 2.4rem;
+    }
+
+    .article__tags-list, .cta-section {
+        display: none;
+    }
+
+    .aside {
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: 481px 242px;
+        gap: 1.6rem;
+    }
+
+    .aside > * {
+        height: 100%;
+    }
+
+    .card-gift {
+        min-height: auto;
+    }
+
+    .card-offer {
+        padding: 1.6rem;
+    }
+
+    .orange-blob {
+        display: none;
+    }
 }
