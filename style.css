@@ -568,6 +568,7 @@ body {
 }
 
 .article__quote {
+    position: relative;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -578,6 +579,16 @@ body {
     line-height: 2.4rem;
     color: #CDD0D5;
     background: #F3F7FE;
+}
+
+.article__quote::after {
+    position: absolute;
+    content: "";
+    width: 5rem;
+    height: 4rem;
+    background: no-repeat center / 100% url("svg/quote.svg") ;
+    top: 2.4rem;
+    left: 2.4rem;
 }
 
 .article__quote-author {
@@ -770,10 +781,6 @@ body {
     line-height: 2rem;
 }
 
-.card-psycho {
-    margin-bottom: 2.8rem;
-}
-
 .card-gift {
     margin-bottom: 4.2rem;
 }
@@ -785,6 +792,8 @@ body {
     border: 1px solid #DEDEDE;
     border-radius: 1.6rem;
     padding: 2.4rem 1.6rem 3.6rem 1.6rem;
+    margin-bottom: 2.8rem;
+    box-shadow: 0 30px 50px #EFF5FB;
 }
 
 .card-psycho__tags-list {
@@ -923,6 +932,7 @@ body {
     background-image: url("images/gift1.png"), url("images/gift2.png");
     background-repeat: no-repeat, no-repeat;
     background-position: 195% 199%;
+    box-shadow: 0 30px 50px #EFF5FB;
 }
 
 .card-offer__title {
@@ -998,23 +1008,28 @@ body {
     .header__container, main, .footer__top, .footer__bottom {
         width: 91%;
         max-width: 934px;
-        margin: 0 auto;
     }  
+
     .header__nav-list {
         gap: 1.6rem;
     }
+
     .header__nav-link-dropdown {
         gap: .4rem;
     }
+
     .articles {
         margin-bottom: 3.5rem;
     }
+
     .footer {
         margin-top: 6rem;
     }
+
     .article-container {
         gap: 2.4rem;
     }
+
     .aside {
         width: 100%;
     }
@@ -1033,7 +1048,6 @@ body {
     .header__container, main, .footer__top, .footer__bottom {
         width: 94%;
         max-width: 728px;
-        margin: 0 auto;
     } 
 
     .header__nav {
@@ -1113,10 +1127,10 @@ body {
 }
 
 @media screen and (min-width: 300px) and (max-width: 767px) {
+    
     .header__container, main, .footer__top, .footer__bottom {
         width: 90%;
         max-width: 374px;
-        margin: 0 auto;
     } 
 
     .header__nav {
@@ -1156,6 +1170,12 @@ body {
     .chips {
         margin: 2.4rem -2rem 1.6rem auto;
         overflow-x: scroll;
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+    }
+
+    .chips::-webkit-scrollbar {
+        display: none;
     }
 
     .chips__list {
@@ -1223,5 +1243,11 @@ body {
     }
     .aside {
         width: 100%;
+    }
+}
+
+@media screen and (max-width: 314px) {
+    .footer__btn {
+        display: none;
     }
 }
