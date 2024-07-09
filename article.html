@@ -10,7 +10,7 @@
 </head>
 
 <body>
-    <header role="banner" class="header">
+    <header class="header">
         <div class="header__container">
             <a href="index.html" class="header__logo">
                 <img src="svg/logo.svg" alt="Логотип YouTalk">
@@ -95,27 +95,33 @@
                             Мама привет!
                         </a>
                     </li>
-                    <ul class="article__nested-list">
-                        <li class="article__nested-item">
-                            <a href="#" class="article__content-link">
-                                Под под заголовок под заголовком
-                            </a>
-                        </li>
+                    <li>
                         <ul class="article__nested-list">
                             <li class="article__nested-item">
                                 <a href="#" class="article__content-link">
-                                    Под под под заголовок под заголовком
+                                    Под под заголовок под заголовком
                                 </a>
                             </li>
-                            <ul class="article__nested-list">
-                                <li class="article__nested-item">
-                                    <a href="#" class="article__content-link">
-                                        Под под под под заголовок под заголовком
-                                    </a>
-                                </li>
-                            </ul>
+                            <li>
+                                <ul class="article__nested-list">
+                                    <li class="article__nested-item">
+                                        <a href="#" class="article__content-link">
+                                            Под под под заголовок под заголовком
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <ul class="article__nested-list">
+                                            <li class="article__nested-item">
+                                                <a href="#" class="article__content-link">
+                                                    Под под под под заголовок под заголовком
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </li>
                         </ul>
-                    </ul>
+                    </li>
                     <li class="article__list-item">
                         <a href="#" class="article__content-link">
                             Ну&nbsp;вот опять заголовок который как &laquo;привет мама&raquo;
@@ -332,9 +338,9 @@
             <aside class="aside">
                 <section class="card-qlick">
                     <img src="images/windows.png" alt="Трое друзей смотрят в смартфон" class="card-qlick__image">
-                    <h1 class="card-qlick__title">
+                    <h2 class="card-qlick__title">
                         Загружаем свободные окошки
-                    </h1>
+                    </h2>
                     <p class="card-qlick__description">
                         Все в&nbsp;порядке, сейчас мы&nbsp;перенаправим вас в&nbsp;сервис записи Qlick, через который удобно выбрать дату, время встречи и&nbsp;оплатить&nbsp;её.
                     </p>
@@ -366,9 +372,9 @@
                             43 года 
                         </li>
                     </ul>
-                    <h1 class="card-psycho__title">
+                    <h2 class="card-psycho__title">
                         С&nbsp;чем работает психолог
-                    </h1>
+                    </h2>
                     <ul class="card-psycho__tasks-list">
                         <li class="card-psycho__tasks-item">
                             Тревога, тревожности
@@ -385,14 +391,14 @@
                     </button>
                 </section>
                 <section class="card-gift">
-                    <h1 class="card-gift__title">
+                    <h2 class="card-gift__title">
                         Дарите заботу
-                    </h1>
+                    </h2>
                 </section>
                 <section class="card-offer">
-                    <h1 class="card-offer__title">
+                    <h2 class="card-offer__title">
                         8 Видео сессий
-                    </h1>
+                    </h2>
                     <span class="card-offer__description">
                         Проработать небольшие проблемы и&nbsp;продвинуться в&nbsp;решении сложных запросов
                     </span>
@@ -422,7 +428,7 @@
             </section>
         </div>
     </main>
-    <footer role="contentinfo" class="footer">
+    <footer class="footer">
         <div class="footer__top">
             <nav class="footer__nav">
                 <ul class="footer__nav-list">
@@ -479,7 +485,7 @@
                 </ul>
             </nav>
             <div class="footer__subscribe">
-                <form class="footer__form" action="">
+                <form class="footer__form" action="#">
                     <label class="footer__label" for="email">
                         Одно письмо в&nbsp;неделю со&nbsp;свежими новостями и&nbsp;акциями
                     </label>

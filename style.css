@@ -820,8 +820,7 @@ body {
 
 .card-psycho__image {
     object-fit: cover;
-    width: 40%;
-    min-width: 120px;
+    width: 120px;
     height: 120px;
     border-radius: 100%;
     margin: 0 auto;
@@ -1012,7 +1011,6 @@ body {
 
     .header__container, main, .footer__top, .footer__bottom {
         width: 91%;
-        max-width: 934px;
     }  
 
     .header__nav-list {
@@ -1079,7 +1077,6 @@ body {
 
     .header__container, main, .footer__top, .footer__bottom {
         width: 94%;
-        max-width: 728px;
     } 
 
     .articles__list-item {
@@ -1114,7 +1111,6 @@ body {
     .aside {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
-        grid-template-rows: 481px 242px;
         gap: 1.6rem;
     }
 
@@ -1122,8 +1118,8 @@ body {
         height: 100%;
     }
 
-    .card-gift {
-        min-height: auto;
+    .card-psycho__tasks-list {
+        margin-bottom: auto;
     }
 
     .card-offer {
@@ -1135,7 +1131,6 @@ body {
     
     .header__container, main, .footer__top, .footer__bottom {
         width: 90%;
-        max-width: 374px;
     } 
 
     .articles__list-item {
