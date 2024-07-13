@@ -1071,12 +1071,16 @@ body {
 @media screen and (min-width: 300px) and (max-width: 1023px) {
 
     .header {
-        position: relative;
+        position: sticky;
+        top: 0;
+        background: #fff;
+        z-index: 4;
     }
 
     .header__nav {
         display: none;
         position: absolute;
+        z-index: 6;
         top: 100%;
         left: 0;
         width: 100vw;
